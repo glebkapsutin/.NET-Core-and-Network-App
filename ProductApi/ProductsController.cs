@@ -12,7 +12,7 @@ namespace ProductApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductsController : ControllerBase // Наследуем от ControllerBase
+    public class ProductsController : ControllerBase 
     {
         private readonly ApplicationDbContext _context;
         private readonly IMemoryCache _cache;
@@ -36,7 +36,7 @@ namespace ProductApi.Controllers
                 };
                 _cache.Set(cacheKey, products, cacheEntryOptions);
             }
-            return Ok(products); // Исправлено
+            return Ok(products);
         }
 
         [HttpPost]
@@ -46,11 +46,11 @@ namespace ProductApi.Controllers
             {
                 _context.Products.Add(product);
                 await _context.SaveChangesAsync();
-                return CreatedAtAction(nameof(GetProducts), new { id = product.Id }, product); // Исправлено
+                return CreatedAtAction(nameof(GetProducts), new { id = product.Id }, product); 
             }
             catch
             {
-                return BadRequest("Error adding product"); // Исправлено
+                return BadRequest("Error adding product");
             }
         }
 
@@ -60,11 +60,11 @@ namespace ProductApi.Controllers
             var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
-                return NotFound(); // Исправлено
+                return NotFound();
             }
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
-            return NoContent(); // Исправлено
+            return NoContent(); 
         }
 
         [HttpGet("csv")]
@@ -79,14 +79,14 @@ namespace ProductApi.Controllers
             }
             var csvBytes = Encoding.UTF8.GetBytes(csv.ToString());
             var stream = new MemoryStream(csvBytes);
-            return File(stream, "text/csv", "products.csv"); // Исправлено
+            return File(stream, "text/csv", "products.csv"); 
         }
 
         [HttpGet("cache-stats")]
         public IActionResult GetCacheStats()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/cache-stats.txt");
-            return PhysicalFile(filePath, "text/plain"); // Исправлено
+            var filePath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/cache-stats.txt");
+            return PhysicalFile(filePath, "text/plain"); 
         }
     }
 }

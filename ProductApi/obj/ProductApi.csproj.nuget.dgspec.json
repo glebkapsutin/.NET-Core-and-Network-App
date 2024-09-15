@@ -44,6 +44,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "GraphQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "GraphQL.Server.Ui.Playground": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.7, )"
@@ -63,6 +75,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Ocelot": {
+              "target": "Package",
+              "version": "[23.3.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

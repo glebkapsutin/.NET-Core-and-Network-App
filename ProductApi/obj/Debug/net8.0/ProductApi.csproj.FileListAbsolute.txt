@@ -8,6 +8,7 @@
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/obj/Debug/net8.0/ProductApi.sourcelink.json
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/appsettings.Development.json
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/appsettings.json
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/ocelot.json
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/ProductApi
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/ProductApi.deps.json
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/ProductApi.runtimeconfig.json
@@ -15,7 +16,18 @@
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/ProductApi.pdb
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Azure.Core.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Azure.Identity.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/FluentValidation.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/GraphQL.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/GraphQLParser.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/GraphQL.MicrosoftDI.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/GraphQL.Server.Transports.AspNetCore.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/GraphQL.Server.Ui.Playground.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/GraphQL.SystemTextJson.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Humanizer.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/IPAddressRange.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Data.SqlClient.dll
@@ -26,6 +38,7 @@
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Extensions.DiagnosticAdapter.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Identity.Client.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
@@ -38,6 +51,9 @@
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.SqlServer.Server.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Mono.TextTemplating.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Ocelot.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/glebkapustin/Desktop/Cods/Product.NET core/ProductApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll

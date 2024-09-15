@@ -1,0 +1,32 @@
+{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/api/inventory",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5001
+          }
+        ],
+        "UpstreamPathTemplate": "/inventory",
+        "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/products",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5002
+          }
+        ],
+        "UpstreamPathTemplate": "/products",
+        "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
+      }
+    ],
+    "GlobalConfiguration": {
+      "BaseUrl": "http://localhost:5000"
+    }
+  }
+  

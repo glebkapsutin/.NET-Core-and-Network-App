@@ -1,22 +1,36 @@
 using Microsoft.EntityFrameworkCore;
 using ProductApi.Data;
-using Microsoft.Extensions.DependencyInjection;
+using GraphQL;
+using GraphQL.Server.Transports.AspNetCore;
+using GraphQL.Server.Ui.Playground;
+using GraphQL.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Добавление служб для контроллеров и кэширования
 builder.Services.AddControllers();
-builder.Services.AddMemoryCache(); // Добавляем кэширование в память
+builder.Services.AddMemoryCache();
+
+// Настройка подключения к базе данных SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); // Используем SQL Server
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Регистрация GraphQL
+builder.Services.AddSingleton<RootQuery>();
+builder.Services.AddSingleton<Schema>();
+
+// Регистрация GraphQL сервера
 
 var app = builder.Build();
 
-// Конфигурация промежуточного ПО
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers(); // Настройка маршрутизации для контроллеров
-});
+app.UseAuthorization();
+
+// Конфигурация маршрутов
+app.MapControllers();
+app.UseGraphQL<Schema>(); // Устанавливаем маршрут для GraphQL
+app.UseGraphQLPlayground(); // Устанавливаем маршрут для GraphQL Playground
 
 app.Run();

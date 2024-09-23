@@ -16,10 +16,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Регистрация GraphQL
-builder.Services.AddSingleton<RootQuery>();
-builder.Services.AddSingleton<Schema>();
-
-// Регистрация GraphQL сервера
+builder.Services.AddScoped<RootQuery>();
+builder.Services.AddScoped<ISchema, Schema>(provider =>
+{
+    var schema = new Schema(provider)
+    {
+        Query = provider.GetRequiredService<RootQuery>()
+    };
+    schema.Initialize();
+    return schema;
+});
 
 var app = builder.Build();
 
@@ -30,7 +36,7 @@ app.UseAuthorization();
 
 // Конфигурация маршрутов
 app.MapControllers();
-app.UseGraphQL<Schema>(); // Устанавливаем маршрут для GraphQL
+app.UseGraphQL<ISchema>(); // Устанавливаем маршрут для GraphQL
 app.UseGraphQLPlayground(); // Устанавливаем маршрут для GraphQL Playground
 
 app.Run();

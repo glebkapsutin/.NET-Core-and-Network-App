@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  graphql-server:
+    build:
+      context: ./GraphQLServer  # Путь к папке с вашим Dockerfile
+    ports:
+      - "5000:80"  # Пробрасываем порт 80 контейнера на 5000 хоста
+    depends_on:
+      - database  # Указываем зависимость от сервиса базы данных
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=database;Database=ApplicationDbContext;User=sa;Password=1234;  # Подключение к базе данных
+
+  database:
+    image: mcr.microsoft.com/mssql/server:2022-latest  # Официальный образ SQL Server
+    environment:
+      - SA_PASSWORD=1234  # Пароль для SQL Server
+      - ACCEPT_EULA=Y  # Принятие лицензионного соглашения
+    ports:
+      - "1433:1433"  # Пробрасываем порт 1433 контейнера на 1433 хоста

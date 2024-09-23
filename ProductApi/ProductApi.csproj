@@ -21,7 +21,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.0" />
     <PackageReference Include="GraphQL" Version="8.0.2" />
     <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="8.0.2" />
-    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="8.0.2" />
+  
 
 
     

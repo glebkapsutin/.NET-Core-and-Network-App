@@ -12,14 +12,15 @@ public class RootQuery : ObjectGraphType
     {
         _context = context;
 
-        Field<ListGraphType<ProductType>>(
+        FieldAsync<ListGraphType<ProductType>>(
             "products",
-            resolve: context => _context.Products.ToListAsync() // Используем контекст для доступа к данным
+            resolve: async context => await _context.Products.ToListAsync() // Используем контекст для доступа к данным
         );
 
-        Field<ListGraphType<InventoryType>>(
+        FieldAsync<ListGraphType<InventoryType>>(
             "inventory",
-            resolve: context => _context.Inventory.ToListAsync() // Используем контекст для доступа к данным
+            resolve: async context => await _context.Inventory.ToListAsync() // Используем контекст для доступа к данным
         );
     }
 }
+

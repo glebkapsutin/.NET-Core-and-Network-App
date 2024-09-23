@@ -7,7 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 namespace ProductApi.Data
 {
   public class ApplicationDbContext : DbContext
-{
+  {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
     {
     }
@@ -17,6 +17,6 @@ namespace ProductApi.Data
 
     // Новое свойство для таблицы инвентаря (Inventory)
     public DbSet<Inventory> Inventory { get; set; }
-}
+  }
 
 }
